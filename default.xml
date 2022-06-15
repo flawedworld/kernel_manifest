@@ -5,7 +5,7 @@
   <remote  name="aosp-barbet"   fetch="https://android.googlesource.com/"   revision="refs/tags/android-12.1.0_r0.27"/>
   <remote  name="aosp-coral"    fetch="https://android.googlesource.com/"   revision="refs/tags/android-12.1.0_r0.24"/>
   <remote  name="aosp-sunfish"  fetch="https://android.googlesource.com/"   revision="refs/tags/android-12.1.0_r0.25"/>
-  <remote  name="aosp-master"   fetch="https://android.googlesource.com/"   revision="refs/heads/master"/>
+  <remote  name="aosp"   fetch="https://android.googlesource.com/" />
   <remote  name="aosp-stable"   fetch="https://android.googlesource.com/"   revision="refs/heads/android12L-release"/>
   <remote  name="grapheneos"    fetch="https://github.com/GrapheneOS/"      revision="refs/heads/12.1" />
 
@@ -85,8 +85,8 @@
   <project path="build"                                                                 name="kernel_build"                                                       groups="generic" remote="grapheneos"   revision="815ad1c69d553ac720a833330a694f2bdd19e321" /> <!-- based on f8ae8a9be8b018ba90a0f576488833fabb3fda74 as 4th and 5th gen use it, 1 commit ahead of 6th gen -->
   <project path="kernel/configs"                                                        name="kernel_configs"                                                     groups="generic" remote="grapheneos"   /> <!-- based on stable tag -->
   <project path="prebuilts/build-tools"                                                 name="platform/prebuilts/build-tools"                                     groups="generic" remote="aosp-stable"  clone-depth="1" />
-  <project path="prebuilts/kernel-build-tools"                                          name="kernel/prebuilts/build-tools"                                       groups="generic" remote="aosp-master"  clone-depth="1" revision="a5fcf02304b51f43d2c8bfd587e26755e3ce2701" /> <!-- all 12L manifests use this -->
-  <project path="prebuilts/gas/linux-x86"                                               name="platform/prebuilts/gas/linux-x86"                                   groups="generic" remote="aosp-master"  clone-depth="1" revision="592150fc8ae9f48f2e73f390961f32ca6f5f6a9f" /> <!-- redbull manifest uses this -->
+  <project path="prebuilts/kernel-build-tools"                                          name="kernel/prebuilts/build-tools"                                       groups="generic" remote="aosp"  clone-depth="1" revision="a5fcf02304b51f43d2c8bfd587e26755e3ce2701" /> <!-- all 12L manifests use this -->
+  <project path="prebuilts/gas/linux-x86"                                               name="platform/prebuilts/gas/linux-x86"                                   groups="generic" remote="aosp"  clone-depth="1" revision="592150fc8ae9f48f2e73f390961f32ca6f5f6a9f" /> <!-- redbull manifest uses this -->
   <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9"             name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" groups="generic" remote="aosp-stable"  clone-depth="1" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9"                 name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9"     groups="generic" remote="aosp-stable"  clone-depth="1" />
   <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8"               name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8"   groups="generic" remote="aosp-stable"  clone-depth="1" />
